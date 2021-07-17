@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.bracket {
+  &.left-bracket {
+    .h-line {
+      width: 10px;
+      height: 1.5px;
+      background-color: $color-primary;
+    }
+
+    .v-line {
+      width: 1.5px;
+      background-color: $color-primary;
+    }
+  }
+
+  &.right-bracket {
+    .h-line {
+      width: 10px;
+      height: 1.5px;
+      background-color: $color-primary;
+    }
+
+    .v-line {
+      width: 1.5px;
+      background-color: $color-primary;
+    }
+  }
+}

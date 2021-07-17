@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+.hyphen {
+  min-width: 8px;
+  height: 1px;
+  background-color: $color-primary;
+}
