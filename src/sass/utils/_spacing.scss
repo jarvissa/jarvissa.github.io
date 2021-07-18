@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+@each $key, $breakpoint in $grid-breakpoints {
+  @each $property, $shortcut in $spacing-shortcuts {
+    @each $name, $value in $spacing-values {
+      // All directions
+      .#{$shortcut}#{$spacing-all}-#{$key}-#{$name} {
+        @include respond(min, $key) {
+          #{$property}: $value !important;
+        }
+      }
+
+      // Cardinal directions
+      @each $direction, $suffix in $spacing-directions {
+        .#{$shortcut}#{$suffix}-#{$key}-#{$name} {
+          @include respond(min, $key) {
+            #{$property}-#{$direction}: $value !important;
+          }
+        }
+      }
+
+      // Horizontal axis
+      .#{$shortcut}#{$spacing-horizontal}-#{$key}-#{$name} {
+        @include respond(min, $key) {
+          #{$property}-left: $value !important;
+          #{$property}-right: $value !important;
+        }
+      }
+
+      // Vertical axis
+      .#{$shortcut}#{$spacing-vertical}-#{$key}-#{$name} {
+        @include respond(min, $key) {
+          #{$property}-top: $value !important;
+          #{$property}-bottom: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@each $key, $breakpoint in $grid-breakpoints {
+  @each $property, $direction in $spacing-directions {
+    @each $name, $value in $spacing-values {
+      .#{$direction}-#{$key}-#{$name} {
+        @include respond(min, $key) {
+          #{$property}: $value !important;
+        }
+      }
+    }
+  }
+}

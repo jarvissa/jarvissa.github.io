@@ -4,6 +4,7 @@
   "description": "Emin's Resume",
   "main": "index.js",
   "scripts": {
+    "watch": "sass --watch --no-source-map --style=compressed src/sass/main.scss src/css/style.min.css",
     "build": "sass --no-source-map --style=compressed src/sass/main.scss src/css/style.min.css",
     "prefix": "postcss src/css/style.min.css --use autoprefixer -d public/css"
   },

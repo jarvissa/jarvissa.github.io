@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+
+@each $property, $value in $grid-breakpoints {
+  .flex-#{$property} {
+    @include respond(min, $property) {
+      display: flex !important;
+    }
+  }
+
+  .flex-wrap-#{$property} {
+    @include respond(min, $property) {
+      flex-wrap: wrap !important;
+    }
+  }
+
+  .flex-nowrap-#{$property} {
+    @include respond(min, $property) {
+      flex-wrap: nowrap !important;
+    }
+  }
+
+  @each $value in $flex-direction-values {
+    .flex-#{$value}-#{$property} {
+      @include respond(min, $property) {
+        flex-direction: $value !important;
+      }
+    }
+  }
+
+  @each $value in $justify-content-values {
+    .justify-#{$value}-#{$property} {
+      @include respond(min, $property) {
+        justify-content: $value !important;
+      }
+    }
+  }
+
+  @each $value in $align-items-values {
+    .align-#{$value}-#{$property} {
+      @include respond(min, $property) {
+        align-items: $value !important;
+      }
+    }
+  }
+
+  @each $value in $align-self-values {
+    .align-self-#{$value}-#{$property} {
+      @include respond(min, $property) {
+        align-self: $value;
+      }
+    }
+  }
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}

@@ -1,0 +1,70 @@
+// Font
+$font-family: "Ubuntu", sans-serif;
+
+// Colors
+$color-primary: hsl(213, 18%, 24%);
+$color-secondary: #636e72;
+$color-chip: red;
+$subtitle-color: hsl(210, 18%, 20%);
+$chip-bg-color: hsl(210, 4%, 60%);
+
+// Layout
+$grid-columns: 12;
+$grid-margin: 0 -15px;
+$grid-padding: 0 15px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px,
+);
+
+$container-max-widths: (
+  sm: 640px,
+  md: 800px,
+);
+
+// Flex
+$flex-direction-values: row, row-reverse, column, column-reverse;
+$justify-content-values: flex-start, flex-end, center, space-between,
+  space-around, space-evenly;
+$align-items-values: flex-start, flex-end, center, baseline, stretch;
+$align-self-values: auto, flex-start, flex-end, center, baseline, stretch;
+
+// Spacing
+$spacing-shortcuts: (
+  "margin": "m",
+  "padding": "p",
+);
+
+$spacing-directions: (
+  "top": "t",
+  "right": "r",
+  "bottom": "b",
+  "left": "l",
+);
+
+$spacing-all: "a";
+$spacing-horizontal: "x";
+$spacing-vertical: "y";
+
+$spacing-values: (
+  "0": 0,
+  "auto": auto,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 0.75rem,
+  "4": 1rem,
+  "5": 2rem,
+  "6": 3rem,
+  "7": 4rem,
+  "8": 5rem,
+  "9": 6rem,
+  "10": 7rem,
+  "11": 8rem,
+  "12": 9rem,
+  "13": 10rem,
+);

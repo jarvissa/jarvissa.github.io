@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.container-xs {
+  width: 100%;
+  margin: 0 auto;
+  padding: $grid-padding;
+}
+
+@each $property1, $value1 in $grid-breakpoints {
+  @each $property2, $value2 in $container-max-widths {
+    @include respond(min, $property1) {
+      .container-#{$property1} {
+        @include respond(min, $property2) {
+          max-width: $value2;
+          margin: 0 auto;
+          padding: $grid-padding;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $grid-margin;
+}
+
+@each $property, $value in $grid-breakpoints {
+  @for $i from 1 through $grid-columns {
+    .col-#{$property}-#{$i} {
+      @include respond(min, $property) {
+        flex: 0 0 (100% / ($grid-columns / $i));
+        padding: $grid-padding;
+      }
+    }
+  }
+}
