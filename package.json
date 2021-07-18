@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "sass --watch --no-source-map --style=compressed src/sass/main.scss src/css/style.min.css",
-    "build": "sass --no-source-map --style=compressed src/sass/main.scss src/css/style.min.css",
+    "build": "sass --no-source-map  src/sass/main.scss src/css/style.css",
+    "build-compressed": "sass --no-source-map --style=compressed src/sass/main.scss src/css/style.min.css",
     "prefix": "postcss src/css/style.min.css --use autoprefixer -d public/css"
   },
   "author": "Emin Aliyev",
